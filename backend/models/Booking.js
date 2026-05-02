@@ -1,0 +1,33 @@
+const mongoose = require('mongoose');
+const BookingSchema = new mongoose.Schema({
+  userId:   { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
+  hotelId:  { type: mongoose.Schema.Types.ObjectId, ref: 'Hotel', required: true },
+  roomId:   { type: mongoose.Schema.Types.ObjectId, ref: 'Room', required: true },
+  fullName: { type: String, required: true, trim: true },
+  email: { type: String, required: true, trim: true },
+  phone: { type: String, required: true, trim: true },
+  nationality: { type: String, required: true, trim: true },
+  passportNumber: { type: String, required: true, trim: true },
+  address: { type: String, default: '' },
+  gender: { type: String, default: '' },
+  checkIn:  { type: Date, required: true },
+  checkOut: { type: Date, required: true },
+  adults: { type: Number, required: true, min: 1, default: 1 },
+  children: { type: Number, default: 0, min: 0 },
+  numberOfRooms: { type: Number, required: true, min: 1, default: 1 },
+  roomType: { type: String, required: true, trim: true },
+  bedPreference: { type: String, default: '' },
+  smokingPreference: { type: String, default: '' },
+  arrivalTime: { type: String, default: '' },
+  specialNotes: { type: String, default: '' },
+  promoCode: { type: String, default: '' },
+  hiddenByUser: { type: Boolean, default: false },
+  status:   { type: String, enum: ['saved', 'paid', 'approved', 'refunded', 'cancelled'], default: 'saved' },
+  payment: {
+    method: { type: String, enum: ['demo-card', 'pay-at-hotel'], default: 'demo-card' },
+    status: { type: String, enum: ['unpaid', 'paid', 'refunded'], default: 'unpaid' },
+    paidAt: { type: Date },
+    last4: { type: String },
+  },
+}, { timestamps: true });
+module.exports = mongoose.model('Booking', BookingSchema);
