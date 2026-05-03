@@ -9,6 +9,7 @@ export default function SystemDashboard() {
     const { data } = await api.get('/system-admin/ratings-summary')
     setSummary(data || summary)
   }
+  
 
   const recalcBadges = async () => {
     const { data } = await api.post('/system-admin/badges/recalculate')

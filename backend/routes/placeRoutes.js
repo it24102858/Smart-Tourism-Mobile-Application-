@@ -192,6 +192,7 @@ router.get('/guide-bookings/my', auth, async (req, res) => {
   }
 });
 
+
 router.put('/guide-bookings/:id', auth, async (req, res) => {
   try {
     const booking = await GuideBooking.findById(req.params.id);
