@@ -13,11 +13,12 @@ export default function DiscountManagement() {
   const [toast, setToast] = useState(null)
   const [loading, setLoading] = useState(false)
 
-  
+
   const notify = (message, type = 'success') => setToast({ message, type })
   const set = (k, v) => setForm(f => ({ ...f, [k]: v }))
   const today = new Date().toISOString().slice(0, 10)
 
+  
   const load = useCallback(async () => {
     try {
       const [dRes, hRes, rRes] = await Promise.all([

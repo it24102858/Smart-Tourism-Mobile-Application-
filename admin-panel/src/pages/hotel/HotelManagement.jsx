@@ -12,6 +12,7 @@ const readFileAsDataUrl = file =>
     reader.readAsDataURL(file)
   })
 
+
   
 export default function HotelManagement() {
   const [hotels, setHotels] = useState([])
