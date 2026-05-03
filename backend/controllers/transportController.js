@@ -2,6 +2,7 @@ const Transport = require('../models/Transport');
 const TransportBooking = require('../models/TransportBooking');
 const { isTransportAdmin } = require('../utils/access');
 
+
 const toDate = value => new Date(value);
 
 const hasBookingConflict = async ({ vehicleId, startDate, endDate, excludeId = null }) => {

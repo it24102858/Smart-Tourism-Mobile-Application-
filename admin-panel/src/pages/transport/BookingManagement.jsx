@@ -24,6 +24,7 @@ export default function BookingManagement() {
     }
   }, [])
 
+  
   useEffect(() => {
     load()
   }, [load])

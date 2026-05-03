@@ -14,6 +14,7 @@ export default function TransportDashboard() {
     setBookings(Array.isArray(bRes.data) ? bRes.data : [])
   }, [])
 
+  
   useEffect(() => {
     load().catch(() => {})
   }, [load])
