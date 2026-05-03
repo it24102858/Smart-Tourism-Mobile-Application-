@@ -12,6 +12,7 @@ export default function ReviewManagement() {
     const { data } = await api.get('/reviews')
     setReviews(Array.isArray(data) ? data : [])
   }, [])
+  
 
   useEffect(() => {
     load().catch(() => notify('Failed to load reviews', 'error'))

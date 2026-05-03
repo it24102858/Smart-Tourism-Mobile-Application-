@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import api from '../../api/axios'
 
+
 export default function ReviewModeration() {
   const [reviews, setReviews] = useState([])
   const [reports, setReports] = useState([])
@@ -13,6 +14,8 @@ export default function ReviewModeration() {
     setReviews(Array.isArray(reviewsRes.data) ? reviewsRes.data : [])
     setReports(Array.isArray(reportsRes.data) ? reportsRes.data : [])
   }
+  
+
 
   useEffect(() => {
     load().catch(() => {})
