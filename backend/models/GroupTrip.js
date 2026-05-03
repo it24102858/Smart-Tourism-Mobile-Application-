@@ -10,6 +10,7 @@ const MemberSchema = new mongoose.Schema(
   { _id: true }
 );
 
+
 const ItineraryItemSchema = new mongoose.Schema(
   {
     title: { type: String, required: true, trim: true },
