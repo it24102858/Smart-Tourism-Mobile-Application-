@@ -9,4 +9,5 @@ const RoomSchema = new mongoose.Schema({
   images: { type: [String], default: [] },
   isBookedNow: { type: Boolean, default: false },
 }, { timestamps: true });
+
 module.exports = mongoose.model('Room', RoomSchema);

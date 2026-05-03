@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from 'react'
 import api from '../../api/axios'
-import Toast from '../../../components/Toast'
+import Toast from '../../../components/Toast' 
 
 const EMPTY = {
   name: '',
