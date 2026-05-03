@@ -21,6 +21,7 @@ export default function VehicleManagement() {
 
   const notify = (message, type = 'success') => setToast({ message, type })
 
+  
   const load = useCallback(async () => {
     try {
       const { data } = await api.get('/transport')
