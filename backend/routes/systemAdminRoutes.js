@@ -17,6 +17,7 @@ router.get('/system-admin/users', auth, ensureSystemAdmin, async (req, res) => {
   }
 });
 
+
 router.patch('/system-admin/users/:id/remove', auth, ensureSystemAdmin, async (req, res) => {
   try {
     const reason = String(req.body?.reason || '').trim();

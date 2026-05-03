@@ -17,6 +17,7 @@ const ReviewSchema = new mongoose.Schema(
         userId: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
         value: { type: String, enum: ['helpful', 'not_helpful'] },
       },
+      
     ],
     reports: [
       {
