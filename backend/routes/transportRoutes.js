@@ -2,6 +2,7 @@ const router = require('express').Router();
 const auth = require('../middleware/auth');
 const controller = require('../controllers/transportController');
 
+
 router.post('/transport', auth, controller.createVehicle);
 router.get('/transport', controller.getVehicles);
 router.put('/transport/:id', auth, controller.updateVehicle);
