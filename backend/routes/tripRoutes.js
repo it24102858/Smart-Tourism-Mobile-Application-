@@ -3,6 +3,7 @@ const auth = require('../middleware/auth');
 const GroupTrip = require('../models/GroupTrip');
 const User = require('../models/User');
 
+
 const normalize = v => String(v || '').trim().toLowerCase();
 
 const getAccess = (trip, user) => {
