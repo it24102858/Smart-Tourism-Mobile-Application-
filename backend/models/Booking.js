@@ -29,5 +29,6 @@ const BookingSchema = new mongoose.Schema({
     paidAt: { type: Date },
     last4: { type: String },
   },
+  
 }, { timestamps: true });
 module.exports = mongoose.model('Booking', BookingSchema);

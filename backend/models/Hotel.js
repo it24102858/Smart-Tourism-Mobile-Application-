@@ -7,4 +7,5 @@ const HotelSchema = new mongoose.Schema({
   images:      [String],
   ownerId:     { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
 }, { timestamps: true });
+
 module.exports = mongoose.model('Hotel', HotelSchema);

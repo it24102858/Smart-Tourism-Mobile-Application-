@@ -13,6 +13,7 @@ const EMPTY = {
   isBookedNow: false,
 }
 
+
 const readFileAsDataUrl = file =>
   new Promise((resolve, reject) => {
     const reader = new FileReader()

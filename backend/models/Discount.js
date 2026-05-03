@@ -7,4 +7,5 @@ const DiscountSchema = new mongoose.Schema({
   startDate:  Date,
   endDate:    Date,
 }, { timestamps: true });
+
 module.exports = mongoose.model('Discount', DiscountSchema);

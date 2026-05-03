@@ -11,6 +11,7 @@ const nightsBetween = (checkIn, checkOut) => {
   return diff > 0 ? diff : 0
 }
 
+
 export default function OwnerDashboard() {
   const [hotels, setHotels] = useState([])
   const [rooms, setRooms] = useState([])
