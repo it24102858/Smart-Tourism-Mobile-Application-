@@ -2,7 +2,6 @@ const router = require('express').Router();
 const auth = require('../middleware/auth');
 const TravelRoute = require('../models/TravelRoute');
 
-
 const toRad = d => (d * Math.PI) / 180;
 const haversineKm = (a, b) => {
   if (
