@@ -9,7 +9,6 @@ const StopSchema = new mongoose.Schema(
   { _id: false }
 );
 
-
 const TravelRouteSchema = new mongoose.Schema(
   {
     userId: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
